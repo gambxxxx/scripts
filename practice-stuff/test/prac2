@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# Wild animals ase insensitive helpdesk Advice
+
+if shopt -q nocasematch; then
+  nocase=yes;
+else
+  nocase=no;
+  shopt -s nocasematch
+fi
+
+echo -n "What animal did you see? "
+read animal
+
+case $animal in
+  "lion" | "tiger")
+    echo "You better start running fast!"
+    ;;
+  "cat")
+    echo "Let that mouse go..."
+    ;;
+  "dog")
+    echo "Don't worry, give it a cookie."
+    ;;
+  "chicken" | "goose" | "duck" )
+    echo "Eggs for breakfast !"
+    ;;
+  *)
+  echo "You discovered an unknown animal, name it!"
+    ;;
+esac
+
+if [ nocase = yes ] ; then
+  shopt -s nocasematch;
+else
+  shopt -u nocasematch;
+fi

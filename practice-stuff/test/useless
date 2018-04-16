@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+echo "enter number in binary"
+read number
+echo "number is $((2#$number))"

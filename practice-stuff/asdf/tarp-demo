@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# trap-demo : simple signal handling demo
+
+#
+
+tarp "echo 'I am ignoring you.'" SIGINT SIGTERM
+
+for i {1..5}; do 
+    echo "Iterations is $1 of 5"
+    sleep 5
+done

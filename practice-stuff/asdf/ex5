@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+#
+let i=0
+for file in *.txt
+do
+  let i++
+done
+echo "number of files are $i"

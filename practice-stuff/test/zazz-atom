@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#  sys_info_page: blyat
+
+PROGNAME=$(basename $0)
+TITLE="System Information Report , by $HOSTNAME
+CURRENT_TIME=$(date +"%x %r %Z")
+TIMESTAMP="Generated $CURRENT_TIME, by $USER"
+
+report_uptime() {
+    cat <<- _EOF_
+        <H2>System Uptime</H2>
+        <PRE>$(uptime)</PRE>
+_EOF_
+return
+}

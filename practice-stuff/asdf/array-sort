@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Array sort
+
+a=(f e d c b a)
+
+echo "Original array: ${a[@]}"
+a_sorted=($(for i in "${a[@]}"; do echo $i; done | sort))
+echo "Sorted array: ${a_sorted[@]}"
+
+echo "Deleting ${a[@]}..."
+unset a
+a=($(for i in "${a_sorted[@]}"; do echo $i; done ))
+echo "Deleting secondary array. "
+unset a_sorted
+echo "We are left with ${a[@]}"

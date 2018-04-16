@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# while-read: Read lines from file
+
+while read distro version release; do
+    printf "Distro: %s\tVersion: %s\t Released: %s\n"\
+    $distro \
+    $version \
+    $release
+done < distros.txt

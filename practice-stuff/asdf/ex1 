@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+#
+for counter in {3..7}
+do
+  echo counting from 3 to 7 now at $counter
+done

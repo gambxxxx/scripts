@@ -1,0 +1,4 @@
+#!/bin/bash
+## Installer ##
+sudo apt-get install wine
+sudo apt-get install sudoku

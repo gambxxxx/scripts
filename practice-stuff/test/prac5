@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#
+read -p "enter word > "
+###########################
+case $REPLY in
+  [[:alpha:]]) echo "is a single alphabetical character." ;;
+  [ABC][0-0]) echo "is A, B or C followed by a digit" ;;
+  ???) echo "is three characters long ";;
+  *.txt) echo "is a word ending in .txt" ;;
+  *) echo "it's something else ";;
+esac

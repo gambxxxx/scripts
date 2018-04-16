@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+#
+echo -n Enter a number:
+read number
+let pom=$number+5
+echo your num + 5 = $pom

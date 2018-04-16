@@ -1,0 +1,39 @@
+#!/bin/bash
+#
+# Tomcat Starter v.1
+#
+#
+STARTER=/home/petar/Documents/tomcat-test/bin/startup.sh
+STOPPER=/home/petar/Documents/tomcat-test/bin/shutdown.sh
+
+tomcat_start(){
+  if [[ -n $STARTER  ]]; then
+    $STARTER
+    echo "Tomcat Staging started successfully. "
+  else
+    echo "Error, Tomcat Staging failed to start."
+    exit 1
+  fi
+}
+tomcat_stop(){
+  if [[ -n $STOPPER ]]; then
+    $STOPPER
+    echo "Tomcat Staging has successfully stopped."
+  else
+    echo "Error, can't execute shutdown.sh"
+  fi
+}
+
+###################################################
+
+echo "Press 1 to Start Tomcat Staging. ->"
+echo "Press 2 to Stop Tomcat Staging. ->"
+read choose
+
+if [ $choose == 1 ]; then
+    tomcat_start
+elif [ $choose == 2 ]; then
+    tomcat_stop
+else 
+    exit 1
+fi

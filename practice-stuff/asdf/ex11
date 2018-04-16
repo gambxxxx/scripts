@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+#
+echo Enter a number:
+read number1
+echo Enter another number:
+read number2
+
+let sum=$number1+$number2
+let prod=$number1*$number2
+if [ $number1 -lt 1 -o $number1 -gt 100 ]
+then
+    echo Wrong number...
+    exit 1
+fi
+if [ $number2 -lt 1 -o $number2 -gt 100 ]
+then
+    echo Wrong number...
+    exit 1
+fi
+
+if [ $sum -eq $prod ]
+then
+    echo Congratulations Sum = Product
+fi

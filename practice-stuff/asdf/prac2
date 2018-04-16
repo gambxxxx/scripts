@@ -1,0 +1,6 @@
+#!/bin/bash
+read one
+if [ -f $one ]
+then echo $one exists!
+else echo $one not found!
+fi
