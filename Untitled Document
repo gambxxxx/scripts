@@ -1,0 +1,13 @@
+systemd -unitfile -tomcat
+appache install
+ssl test
+generate openssl private/public key with common name
+configure appache to sssl 443 port
+
+
+./generate_cert.sh ssl-test-server /etc/httpd/certs/ssl
+
+openssl generate key
+move key to loc
+openssl generate certs
+move cert to location

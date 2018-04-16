@@ -1,0 +1,20 @@
+#TOMCAT service file
+
+[Unit]
+Description=Redmine server
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=tomcat
+Group=tomcat
+ExecStart=/home/petar/Documents/tomcat-test/bin/startup.sh
+ExecStop=/home/petar/Documents/tomcat-test/bin/shutdown.sh
+Restart=on-abort
+TimeoutSec=300
+SyslogIdentifier=tomcat-%i
+EnvironmentFile=/home/petar/Documents/tomcat-test/conf/tomcat.conf
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
