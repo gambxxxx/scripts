@@ -1,12 +1,12 @@
 #!/bin/bash
 # Run with SUDO
 echo "Enter directory to generate key and cert"
-read $1
+Generate_Key=$1
 echo "Enter directory to save key and cert"
-read $2
+Save_Key=$2
 cd $HOME
-mkdir $1
-mkdir -p $2
+mkdir $Generate_Key
+mkdir -p $Save_Key
 #   Generate Key
 openssl req -new -x509 -days 365 -sha1 -newkey rsa:1024 \
 -nodes -keyout server.key -out server.crt \
@@ -17,4 +17,4 @@ openssl req -new -sha1 -newkey rsa:1024 -nodes \
 -subj '/O=Company/OU=Department/CN=127.0.0.1'
 
 cd $HOME
-mv $1 $2
+mv $Generate_Key $Save_Key
