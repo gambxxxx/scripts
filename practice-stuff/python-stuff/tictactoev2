@@ -1,0 +1,6 @@
+import random
+
+# Global variables
+theBoard = [' '] * 10   # a list of empty spaces
+available = [str(num) for num in range(0,10)] # a List Comprehension
+players = [0,'X','O']
