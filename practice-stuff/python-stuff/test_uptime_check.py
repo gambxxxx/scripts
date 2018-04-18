@@ -3,16 +3,17 @@ import time
 from colorama import Fore
 from colorama import Style
 
-
+type(print(urllib.request.urlopen("http://allutomotive.com/").getcode()))
+'''
 def check_uptime():
     while True:
-        
-        if print(urllib.request.urlopen("http://allutomotive.com/").getcode()) == '200':
+        up_time = print(urllib.request.urlopen("http://allutomotive.com/").getcode())
+        if up_time != 200:
             print (f'Site is {Fore.RED}DOWN{Style.RESET_ALL}')
             break
         else:
             print (f'Site is {Fore.GREEN}UP{Style.RESET_ALL}')
-            print (urllib.request.urlopen("http://allutomotive.com/").getcode())
             time.sleep(5)
 
 check_uptime()
+'''
