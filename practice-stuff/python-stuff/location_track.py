@@ -17,8 +17,8 @@ def main():
     ip = raw_input("Enter ip adress: ")
     match = geolite2.lookkup(ip)
     lat, lon = match.location
-    print 'Latitude, Longitude = ', lat, lon
-    print 'adress = ', get_location(lat,lon)
+    print ('Latitude, Longitude = ', lat, lon)
+    print ('adress = ', get_location(lat,lon))
 
 if __name__ == '__main__':
     main()
