@@ -4,18 +4,18 @@ from colorama import Fore
 from colorama import Style
 
 def check_uptime():
+    t=300 ###########################################3####### Smeni ako sakas za pochesto / poretko da proverva (vo sec)
+    web_site_url="http://allutomotive.com/"
+    web_site_name="Allutomotive.com"
     while True:
         try:
-            print(urllib.request.urlopen("http://localhost:7070/").getcode())
-            print (f'Site is {Fore.GREEN}UP{Style.RESET_ALL}')
+            print(urllib.request.urlopen(web_site_url).getcode())
+            print(web_site_name)
+            print(f' is {Fore.GREEN}UP AND RUNNING !!!{Style.RESET_ALL}')
         except:
-            print (f'Site is {Fore.RED}DOWN{Style.RESET_ALL}')
-        #if print(urllib.request.urlopen("http://localhost:7070/").getcode()) == '200':
-           # print (f'Site is {Fore.RED}DOWN{Style.RESET_ALL}')
-            #break
+            print(web_site_name)
+            print (f' is {Fore.RED}DOWN !!!{Style.RESET_ALL}')
         finally:
-            #print (f'Site is {Fore.GREEN}UP{Style.RESET_ALL}')
-            #print (urllib.request.urlopen("http://localhost:7070/").getcode())
-            time.sleep(5)
+            time.sleep(t)
 
 check_uptime()
