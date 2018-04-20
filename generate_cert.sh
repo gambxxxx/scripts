@@ -12,9 +12,11 @@ openssl req -new -x509 -days 365 -sha1 -newkey rsa:1024 \
 -nodes -keyout server.key -out server.crt \
 -subj '/O=Company/OU=Department/CN=127.0.0.1'
 #   Generate Certificate
-openssl req -new -sha1 -newkey rsa:1024 -nodes \ 
--keyout server.key -out 127.0.0.1.csr \ 
--subj '/O=Company/OU=Department/CN=127.0.0.1'
+#openssl req -new -sha1 -newkey rsa:1024 -nodes \ 
+#-keyout server.key -out 127.0.0.1.csr \ 
+#-subj '/O=Company/OU=Department/CN=127.0.0.1'
+a
+
 
 cd $HOME
 mv $Generate_Key $Save_Key
