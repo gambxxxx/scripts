@@ -6,7 +6,7 @@ def get_location(lat_coords,long_coords):
     maps_url="http://maps.googleapis.com/maps/api/geocode/json?latlng=%s,%s&sensor=false" % (lat_coords,long_coords)
     cont=urlopen(maps_url).read()
     data=json(cont)
-
+        
     components=data['results'][0]['formatted_adress']
     return components
 
